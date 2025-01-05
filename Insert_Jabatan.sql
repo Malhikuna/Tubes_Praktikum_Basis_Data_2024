@@ -1,4 +1,4 @@
-INSERT INTO dbo.Jabatan (Jabatan_Id, NamaJabatan, Deskripsi_Jabatan)
+INSERT INTO dbo.Jabatan (Jabatan_Id, Nama_Jabatan, Deskripsi_Jabatan)
 VALUES (1, 'Ketua Umum', ' Ketua Umum adalah posisi tertinggi yang bertanggung jawab atas seluruh operasional dan kebijakan strategis organisasi tersebut.
 Ketua Umum memimpin dan mengarahkan jalannya organisasi, serta memastikan tujuan organisasi tercapai dengan efektif dan efisien.'),
 (2, 'Sekretaris Jendral', 'Sekretaris Jenderal (Sekjen) adalah posisi penting dalam struktur organisasi yang berperan sebagai penghubung antara pimpinan (misalnya Ketua Umum) dan anggota organisasi, serta bertanggung jawab dalam mengelola administrasi, dokumentasi, 
