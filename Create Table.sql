@@ -1,8 +1,10 @@
+CREATE DATABASE [Sumber Daya Manusia HMTIF];
+
 USE [Sumber Daya Manusia HMTIF];
 
 -- Table: Status_Keanggotaan
 CREATE TABLE Status_Keanggotaan (
-    Status_Id TINYINT PRIMARY KEY,
+    Status_Keanggotaan_Id TINYINT PRIMARY KEY,
     Status_Sekarang VARCHAR(50) NOT NULL
 );
 
@@ -48,12 +50,15 @@ CREATE TABLE Rapat (
 CREATE TABLE Anggota (
     Anggota_Id INT IDENTITY PRIMARY KEY,
     Nama VARCHAR(100) NOT NULL,
+	First_Name VARCHAR(100) NOT NULL,
+	Last_Name VARCHAR(100) NULL,
+	Jenis_Kelamin VARCHAR (20) NOT NULL,
     NIM CHAR(9) UNIQUE NOT NULL,
     No_Handphone VARCHAR(20) NOT NULL,
     Tanggal_Bergabung DATE NOT NULL,
     Tanggal_Keluar DATE,
     Jabatan_Id TINYINT FOREIGN KEY REFERENCES Jabatan(Jabatan_Id),
-    Status_Skors CHAR(1),
+    Status_Skors_Id CHAR(1),
     Alamat_Id INT FOREIGN KEY REFERENCES Alamat(Alamat_Id),
     Status_Keanggotaan_Id TINYINT FOREIGN KEY REFERENCES Status_Keanggotaan(Status_Id),
     Divisi_Id TINYINT FOREIGN KEY REFERENCES Divisi(Divisi_Id)
@@ -83,3 +88,4 @@ CREATE TABLE Performa (
     Catatan VARCHAR(100),
     Tanggal_Rekap DATE
 );
+
